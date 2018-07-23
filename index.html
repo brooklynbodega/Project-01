@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cell Match</title>
+
+    <link rel="stylesheet" href="style-css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body id="body">
+    <header>
+        <h1>Cell Match</h1>
+
+    </header>
+    <main>
+        <div>
+            <div class="display-message">Welcome to the Cell Matching Game! The rules are simple:
+                <br>
+                <br> The various cells will be changing color, you must click on each to match them all.
+                <br>
+                <br> If you lose, you can always try again.
+                <br>
+                <br> Pick your difficulty level below to begin!</div>
+            <br>
+            <br>
+            <form>
+                <input class="btn" type="button" value="Easy" onclick="window.location.href='levels-html/level-one.html'" />
+                <input class="btn" type="button" value="Moderate" onclick="window.location.href='levels-html/level-two.html'" />
+                <input class="btn" type="button" value="Hard" onclick="window.location.href='levels-html/level-three.html'" />
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="username-display"></div>
+        <div class="level-display" id="homepage">Home Page</div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <script src="javascript/main.js"></script>
+</body>
+
+</html>
