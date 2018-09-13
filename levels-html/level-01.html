@@ -2,45 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Level One</title>
+  <title>Level One</title>
 
-    <link rel="stylesheet" href="../style-css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="../style-css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
 <body id="body">
-    <div class="header">
-        <div id="countdown">
-            Time Left: 15 Seconds</div>
-            <button class="btn" id="start-game">Start Game</button>
-    </div class="header">
-    <main>
-            <div class="grid-1">
-                <div class="cell-1" id="cell0"></div>
-                <div class="cell-1" id="cell1"></div>
-                <div class="cell-1" id="cell2"></div>
-                <div class="cell-1" id="cell3"></div>
-                <div class="cell-1" id="cell4"></div>
-                <div class="cell-1" id="cell5"></div>
-            </div>
-    </main>
-    <div class="footer">
-        <div class="display-message">Match the colors!</div>
-        <div class="level-display" id="homepage">Easy</div>
-        <form>
-            <input class="btn" type="button" value="Home Page" onclick="window.location.href='../index.html'" />
-        </form>
+  <div class="header">
+    <button class="btn" id="start-game">Start Game</button>
+    <div id="countdown">Time Left: 15 Seconds</div>
+  </div class="header">
+  <main>
+    <div class="grid-1">
+      <div class="cell-1" id="cell0"></div>
+      <div class="cell-1" id="cell1"></div>
+      <div class="cell-1" id="cell2"></div>
+      <div class="cell-1" id="cell3"></div>
+      <div class="cell-1" id="cell4"></div>
+      <div class="cell-1" id="cell5"></div>
     </div>
+  </main>
+  <div class="footer">
+    <div class="display-message">Match the colors!</div>
+    <div class="level-display" id="homepage">Easy</div>
+    <form>
+      <input class="btn" type="button" value="Home Page" onclick="window.location.href='../index.html'" />
+    </form>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-        crossorigin="anonymous"></script>
-    <script src="../javascript/level-01.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+  <script src="../javascript/level-01.js"></script>
 </body>
 
 </html>
