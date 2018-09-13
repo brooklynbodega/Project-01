@@ -13,12 +13,11 @@
 </head>
 
 <body id="body">
-    <header>
-        <h1>Cell Match</h1>
+    <div class="header">
         <div id="countdown">
             Time Left: 15 Seconds</div>
-            <button class="start-game btn">Start Game</button>
-    </header>
+            <button class="btn" id="start-game">Start Game</button>
+    </div class="header">
     <main>
             <div class="grid-1">
                 <div class="cell-1" id="cell0"></div>
@@ -29,19 +28,19 @@
                 <div class="cell-1" id="cell5"></div>
             </div>
     </main>
-    <footer>
+    <div class="footer">
         <div class="display-message">Match the colors!</div>
         <div class="level-display" id="homepage">Easy</div>
         <form>
             <input class="btn" type="button" value="Home Page" onclick="window.location.href='../index.html'" />
         </form>
-    </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
-    <script src="../javascript/level-one.js"></script>
+    <script src="../javascript/level-01.js"></script>
 </body>
 
 </html>

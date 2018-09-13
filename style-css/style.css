@@ -1,28 +1,77 @@
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 body {
   font-family: 'Press Start 2P', cursive;
   background: white;
   color: rgba(10, 10, 10, 1);
-  margin: 10px;
+  /* margin: 10px; */
 }
 
-header {
+.header {
   background: rgba(175, 175, 175, .5);
-  border-radius: 9px;
-  border: 2px solid white;
-  height: 84px;
-  text-align: center;
-  position: relative;
   font-size: 10px;
+  height: 100px;
   padding: 4px;
+  position: relative;
+  text-align: center;
 }
 
 .start-game {
-  position: relative;
   margin: 10px;
+  position: relative;
 }
 
 h1 {
-  position: relative;
+  /* position: relative; */
 }
 
 #countdown {
@@ -30,21 +79,23 @@ h1 {
 }
 
 main {
-  border-radius: 9px;
-  height: 450px;
-  text-align: left;
-  display: flex;
   align-items: center;
+  border-radius: 9px;
+  display: flex;
+  height: 450px;
   justify-content: center;
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
+  text-align: left;
 }
 
 form {
   text-align: center;
 }
+
+/* Used '2c' button code from: https://tympanus.net/Development/CreativeButtons/ */
 
 .btn {
   /* background: none; */
@@ -58,10 +109,10 @@ form {
   display: inline-block;
   font-family: inherit;
   letter-spacing: 1px;
-  margin: 15px 30px;
+  /* margin: 10px; */
   font-weight: 700;
   outline: none;
-  padding: 25px 80px;
+  padding: 10px;
   position: relative;
   text-transform: uppercase;
   transition: none;
@@ -73,8 +124,8 @@ form {
 }
 
 .btn:hover {
-  box-shadow: 0 4px rgb(96, 96, 96);
   background: rgba(100, 100, 100, .5);
+  box-shadow: 0 4px rgb(96, 96, 96);
   color: rgba(220, 220, 220, 1);
   top: 2px;
 }
@@ -93,27 +144,23 @@ form {
   transition: all 0.3s;
 }
 
-/* .btn:hover {
-  background: rgba(100, 100, 100, .5);
-  color: rgba(220, 220, 220, 1);
-} */
 /* LEVEL ONE GRID */
 .grid-1 {
+  align-content: center;
+  align-items: center;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: 0 auto;
   grid-gap: 15px;
   height: 400px;
+  justify-content: center;
+  margin: 0 auto;
   padding: 15px;
 }
 
 .cell-1 {
-  border: solid black 3px;
   background: rgba(175, 175, 175, .5);
+  border: solid black 3px;
   height: 165px;
   width: 165px;
   border-radius: 9px;
@@ -285,15 +332,14 @@ form {
 #cell8 {
 
 } */
-footer {
+
+.footer {
   background: rgba(175, 175, 175, .5);
-  border-radius: 9px;
-  border: 2px solid white;
-  height: 70px;
-  font-size: 14px;
-  text-align: center;
-  padding: 7px;
+  font-size: 10px;
+  height: 100px;
+  padding: 4px;
   position: relative;
+  text-align: center;
 }
 
 .display-message {

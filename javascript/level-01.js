@@ -14,13 +14,13 @@ const cell5 = $('#cell5');
 const cells = $('.cell-1');
 const grid = $('.grid-1');
 let colors = [];
-const startButton = $('.start-game');
+const startButton = $('#start-game');
 let countdown = 16;
 
 // Create start button to begin the game.
 startButton.click(function startGame() {
     countdown = 15;
-    console.log();
+    console.log("start button clicked!");
     $(this).off('click');
     cells.addClass('color-level-1');
 
