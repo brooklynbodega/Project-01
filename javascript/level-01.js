@@ -68,10 +68,12 @@ startButton.click(function startGame() {
 // Reset Cells
 function resetGame() {
   colors = [];
+  countdown = 16;
   $('#countdown').html(`Time Left: 15 Seconds`);
   cells.removeClass('color-level-1');
-  clearInterval(countdownTimer);
-  $('#start-button').on('click');
+  // clearInterval(countdownTimer);
+  $('#start-game').on('click');
+  startCountdown();
 }
 
 

@@ -13,9 +13,8 @@
 </head>
 
 <body id="body">
-  <div class="header">
-    <h1>Cell Match</h1>
-
+  <div class="header" id="homepage-header">
+    <div id="title">Cell Match</div>
   </div>
   <main>
     <div>
@@ -29,16 +28,16 @@
       <br>
       <br>
       <form>
-        <input class="btn" type="button" value="Easy" onclick="window.location.href='levels-html/level-01.html'" />
-        <input class="btn" type="button" value="Moderate" onclick="window.location.href='levels-html/level-02.html'" />
-        <input class="btn" type="button" value="Hard" onclick="window.location.href='levels-html/level-03.html'" />
+        <input class="btn" id="easy" type="button" value="Easy" onclick="window.location.href='levels-html/level-01.html'" />
+        <input class="btn" id="moderate" type="button" value="Moderate" onclick="window.location.href='levels-html/level-02.html'" />
+        <input class="btn" id="hard" type="button" value="Hard" onclick="window.location.href='levels-html/level-03.html'" />
       </form>
     </div>
   </main>
-  <div class="footer">
+  <!-- <div class="footer">
     <div class="username-display"></div>
     <div class="level-display" id="homepage">Home Page</div>
-  </div>
+  </div> -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
