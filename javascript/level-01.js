@@ -31,7 +31,7 @@ startButton.click(function startGame() {
     countdown--;
     console.log(countdown);
     if (countdown >= 0) {
-      $('#countdown').html(`Time Left: ${countdown} Seconds`);
+      $('.countdown').html(`Time Left: ${countdown} Seconds`);
     } else if (countdown === -1) {
       alert("You ran out of time! ⌛️");
       resetGame();
@@ -40,7 +40,7 @@ startButton.click(function startGame() {
 
   /* Create a click event that pauses the animation of the cells being clicked on.
   Help from Rachel & Celeste <3 */
-  $('.cell-1').click(function (event) {
+  $('.cell-1').click(function cellClick(event) {
     // console.log(event);
     $(this).off('click');
     event.target.style.webkitAnimationPlayState = "paused";
@@ -69,7 +69,7 @@ startButton.click(function startGame() {
 function resetGame() {
   colors = [];
   countdown = 16;
-  $('#countdown').html(`Time Left: 15 Seconds`);
+  $('.countdown').html(`Time Left: 15 Seconds`);
   cells.removeClass('color-level-1');
   // clearInterval(countdownTimer);
   $('#start-game').on('click');
