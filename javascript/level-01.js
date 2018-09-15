@@ -14,20 +14,20 @@ const cell5 = $('#cell5');
 const cells = $('.cell-1');
 const grid = $('.grid-1');
 let colors = [];
-const startButton = $('#start-game');
 let countdown = 16;
-
-// Create start button to begin the game.
-startButton.click(function startGame() {
+let countdownTimer;
+const startButton = $('.start-game');
+function startGame() {
   countdown = 15;
   console.log("start button clicked!");
   // Turn off click function on start game
-  $(this).off('click');
+  // startButton.off('click');
+  startButton.hide();
   // Add CSS color change effect
   cells.addClass('color-level-1');
 
   // Begin the countdown timer.
-  let countdownTimer = setInterval(function startCountdown() {
+  countdownTimer = setInterval(function startCountdown() {
     countdown--;
     console.log(countdown);
     if (countdown >= 0) {
@@ -37,10 +37,9 @@ startButton.click(function startGame() {
       resetGame();
     }
   }, 1000);
-
   /* Create a click event that pauses the animation of the cells being clicked on.
   Help from Rachel & Celeste <3 */
-  $('.cell-1').click(function cellClick(event) {
+  cells.click(function (event) {
     // console.log(event);
     $(this).off('click');
     event.target.style.webkitAnimationPlayState = "paused";
@@ -63,17 +62,22 @@ startButton.click(function startGame() {
     };
     checkColors();
   })
-});
+}
+
+// Create start button to begin the game.
+startButton.click(startGame);
 
 // Reset Cells
 function resetGame() {
+  startButton.show();
   colors = [];
   countdown = 16;
   $('.countdown').html(`Time Left: 15 Seconds`);
   cells.removeClass('color-level-1');
-  // clearInterval(countdownTimer);
-  $('#start-game').on('click');
-  startCountdown();
+  // cells.on('click');
+  clearInterval(countdownTimer);
+  // cells.style.webkitAnimationPlayState = "initial";
+
 }
 
 
