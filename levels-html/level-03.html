@@ -14,8 +14,11 @@
 
 <body id="body">
   <div class="header">
-    <div class="countdown">Time Left: 45 Seconds</div>
-    <button class="start-game btn">Start Game</button>
+<div class="countdown">Time Left: 45 Seconds</div>
+<form>
+  <input class="btn" id="start-game-btn" type="button" value="Start Game" />
+  <input class="btn" id="retry-btn" type="button" value="Retry" onclick="retryLevel()" />
+</form>
   </div>
   <main>
     <div class="grid-3">

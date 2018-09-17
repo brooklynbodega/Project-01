@@ -73,7 +73,19 @@ body {
   font-size: 40pt;
 }
 
-.start-game {
+#start-game-btn {
+  margin: 10px;
+  position: relative;
+}
+
+#next-level-btn {
+  display: none;
+  margin: 10px;
+  position: relative;
+}
+
+#retry-btn {
+  display: none;
   margin: 10px;
   position: relative;
 }

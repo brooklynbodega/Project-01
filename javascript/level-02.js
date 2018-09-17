@@ -17,12 +17,13 @@ const cell8 = $('#cell8');
 const cells = $('.cell-2');
 const grid = $('.grid-2');
 let colors = [];
-const startButton = $('.start-game');
-let countdown = 20;
+let countdown = 21;
+let countdownTimer;
+const startButton = $('#start-game-btn');
 
 // Create start button to begin the game.
 startButton.click(function startGame() {
-    countdown = 21;
+    countdown = 20;
     console.log();
     $(this).off('click');
     cells.addClass('color-level-2');
@@ -57,6 +58,7 @@ startButton.click(function startGame() {
                     // If all 9 cells match, user wins and game is reset.
                     alert("You won! 🏆");
                     resetGame();
+                    $('#next-level-btn').show();
                 } else {
                     alert("Awww, you lost 😭");
                     resetGame();
@@ -65,15 +67,17 @@ startButton.click(function startGame() {
         }; checkColors();
 
     })
-    // Reset Cells
-    function resetGame() {
-        colors = [];
-        $('#countdown').html(`Time Left: 20 Seconds`);
-        cells.removeClass('color-level-2');
-        clearInterval(countdownTimer);
-    }
-
 });
+
+// Reset Cells
+function resetGame() {
+  $('#retry-btn').show();
+  colors = [];
+  countdown = 21;
+  $('.countdown').html(`Time Left: 20 Seconds`);
+  cells.removeClass('color-level-1');
+  clearInterval(countdownTimer);
+}
 
 ////////////////////////////////////////
 
