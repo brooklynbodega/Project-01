@@ -1,8 +1,7 @@
-// Force hide retry & next level buttons until after game is beaten
-
 // Test for JS
 
 console.log("this is the level one page");
+
 /* Create a game where a user clicks on colored cells to stop their changing background colors. Once all background colors match, user wins the game. */
 
 // Declare all cells for animation manipulation later.
@@ -18,12 +17,14 @@ let colors = [];
 let countdown = 16;
 let countdownTimer;
 const startButton = $('#start-game-btn');
+// Event listener to begin the game.
+startButton.click(startGame);
 
+// Function for gameplay.
 function startGame() {
   countdown = 15;
   console.log("start button clicked!");
-  // Turn off click function on start game
-  // startButton.off('click');
+  // Hide start game button once begun
   startButton.hide();
   // Add CSS color change effect
   cells.addClass('color-level-1');
@@ -39,6 +40,7 @@ function startGame() {
       resetGame();
     }
   }, 1000);
+
   /* Create a click event that pauses the animation of the cells being clicked on.
   Help from Rachel & Celeste <3 */
   cells.click(function (event) {
@@ -67,13 +69,11 @@ function startGame() {
   })
 }
 
-// Create start button to begin the game.
-startButton.click(startGame);
-
 // Retry level page
 function retryLevel() {
   location.reload();
 }
+
 // Reset Cells
 function resetGame() {
   $('#retry-btn').show();

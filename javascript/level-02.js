@@ -17,25 +17,27 @@ const cell8 = $('#cell8');
 const cells = $('.cell-2');
 const grid = $('.grid-2');
 let colors = [];
-let countdown = 21;
+let countdown = 26;
 let countdownTimer;
 const startButton = $('#start-game-btn');
+// Event listener to begin the game.
+startButton.click(startGame);
 
-// Create start button to begin the game.
-startButton.click(function startGame() {
-    countdown = 20;
-    console.log();
-    $(this).off('click');
+// Function for gameplay.
+function startGame() {
+    countdown = 25;
+    console.log("start button clicked!");
+    // Hide start game button once begun
+    startButton.hide();
     cells.addClass('color-level-2');
 
     // Begin the countdown timer.
-    let countdownTimer = setInterval(function startCountdown() {
+    countdownTimer = setInterval(function startCountdown() {
         countdown--;
         console.log(countdown);
         if (countdown >= 0) {
-            $('#countdown').html(`Time Left: ${countdown} seconds`);
-        }
-        else if (countdown === -1) {
+            $('.countdown').html(`Time Left: ${countdown} Seconds`);
+        } else if (countdown === -1) {
             alert("You ran out of time! ⌛️");
             resetGame();
         }
@@ -43,7 +45,7 @@ startButton.click(function startGame() {
 
    /* Create a click event that pauses the animation of the cells being clicked on.
     Help from Rachel & Celeste <3 */
-    $('.cell-2').click(function (event) {
+    cells.click(function (event) {
         // console.log(event);
         $(this).off('click');
         event.target.style.webkitAnimationPlayState = "paused";
@@ -64,18 +66,23 @@ startButton.click(function startGame() {
                     resetGame();
                 }
             }
-        }; checkColors();
-
+        };
+				checkColors();
     })
-});
+};
+
+// Retry level page
+function retryLevel() {
+  location.reload();
+}
 
 // Reset Cells
 function resetGame() {
   $('#retry-btn').show();
   colors = [];
   countdown = 21;
-  $('.countdown').html(`Time Left: 20 Seconds`);
-  cells.removeClass('color-level-1');
+  $('.countdown').html(`Time Left: 25 Seconds`);
+  cells.removeClass('color-level-2');
   clearInterval(countdownTimer);
 }
 
