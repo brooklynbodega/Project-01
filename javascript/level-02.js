@@ -15,7 +15,7 @@ const cell6 = $('#cell6');
 const cell7 = $('#cell7');
 const cell8 = $('#cell8');
 const cells = $('.cell-2');
-const grid = $('.grid-2');
+const grid = $('.grid');
 let colors = [];
 let countdown = 26;
 let countdownTimer;

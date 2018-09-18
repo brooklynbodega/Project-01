@@ -12,7 +12,7 @@ const cell3 = $('#cell3');
 const cell4 = $('#cell4');
 const cell5 = $('#cell5');
 const cells = $('.cell-1');
-const grid = $('.grid-1');
+const grid = $('.grid');
 let colors = [];
 let countdown = 16;
 let countdownTimer;
