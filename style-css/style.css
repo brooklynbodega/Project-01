@@ -186,7 +186,7 @@ form {
 
 #begin {
   color: rgb(0, 0, 0);
-  background: rgb(142, 247, 140);
+  background: rgb(96, 240, 94);
   box-shadow: 0 6px rgb(75, 188, 73);
 }
 
@@ -290,29 +290,29 @@ form {
 
 /* LEVEL TWO CELL ANIMATIONS */
 .color-level-2 {
-  -webkit-animation: color-level-2 5s steps(1, end) infinite;
-  animation: color-level-2 5s steps(1, end) infinite;
+  -webkit-animation: color-level-2 7s steps(1, end) infinite;
+  animation: color-level-2 7s steps(1, end) infinite;
 }
 
 @keyframes color-level-2 {
   0% {
-    background: rgba(255, 184, 76, 0.31);
+    background: rgb(246, 255, 76);
   }
 
   20% {
-    background: rgba(72, 255, 214, 0.79);
+    background: rgb(0, 208, 255);
   }
 
   40% {
-    background: rgba(216, 150, 255, 0.79);
+    background: rgba(243, 79, 79, 0.91);
   }
 
   60% {
-    background: rgba(100, 100, 100, 0.79);
+    background: rgba(105, 255, 135, 0.913);
   }
 
   80% {
-    background: rgba(243, 79, 79, 0.91);
+    background: rgba(216, 150, 255, 0.79);
   }
 }
 
