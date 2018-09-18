@@ -375,7 +375,6 @@ form {
     -webkit-transform: translateX(-100px);
     transform: translateX(-100px);
   }
-
 }
 
 .footer {
@@ -399,10 +398,6 @@ form {
 
 /* Adjust styling for smaller screens */
 @media screen and (max-width: 625px) {
-  body {
-    background-color: rgba(124, 157, 16, 0.5);
-  }
-
   #title {
     font-size: 26pt;
   }
@@ -416,42 +411,16 @@ form {
     height: 320px;
   }
 
-  form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* LEVEL ONE GRID */
-  .grid-1 {
-    height: 300px;
-    grid-gap: 10px;
-    padding: 5px;
-  }
-
   /* LEVEL ONE CELLS */
   .cell-1 {
     height: 105px;
     width: 105px;
   }
 
-  /* LEVEL TWO GRID */
-  .grid- {
-    height: 270px;
-    grid-gap: 10px;
-    padding: 5px;
-  }
-
   /* LEVEL TWO CELLS */
   .cell-2 {
     height: 80px;
     width: 80px;
-  }
-
-  /* LEVEL THREE GRID */
-  .grid-3 {
-    height: 250px;
-    grid-gap: 5px;
-    padding: 5px;
   }
 
   /* LEVEL THREE CELLS */
@@ -467,26 +436,12 @@ form {
     font-size: 8px;
   }
 
-  /* LEVEL ONE GRID */
-  .grid-1 {
-    height: 250px;
-    grid-gap: 5px;
-    padding: 5px;
-  }
-
   /* LEVEL ONE CELLS */
   .cell-1 {
     height: 70px;
     width: 70px;
   }
-
-  /* LEVEL TWO GRID */
-  .grid-2 {
-    height: 250px;
-    grid-gap: 5px;
-    padding: 5px;
-  }
-
+ 
   /* LEVEL TWO CELLS */
   .cell-2 {
     height: 55px;
@@ -497,16 +452,38 @@ form {
     font-size: 8px;
   }
 
-  /* LEVEL THREE GRID */
-  .grid-3 {
-    height: 250px;
-    grid-gap: 5px;
-    padding: 5px;
-  }
-
   /* LEVEL THREE CELLS */
   .cell-3 {
     height: 40px;
     width: 40px;
+  }
+
+  /* LEVEL THREE SLIDE ANIMATIONS */
+
+  @-webkit-keyframes slide-effect {
+    /* 0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  } */
+
+    20% {
+      -webkit-transform: translateX(50px);
+      transform: translateX(50px);
+    }
+
+    40% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+    }
+
+    60% {
+      -webkit-transform: translateX(50px);
+      transform: translateX(50px);
+    }
+
+    80% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+    }
   }
 }
